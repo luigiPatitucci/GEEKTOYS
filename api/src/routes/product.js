@@ -184,6 +184,7 @@ server.delete("/category/:id", (req, res) => {
   })
 })
 
+
 server.delete("/:id", (req, res) => {          
   Product.findByPk(req.params.id).then((producto) => {
     producto.destroy();
@@ -330,4 +331,5 @@ server.put('/:id/review/:idReview', (req ,res) => {
         })  
 
  
+
 module.exports = server;
